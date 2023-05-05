@@ -1,13 +1,11 @@
 "use client";
-import { useFeatureValue } from "@growthbook/growthbook-react";
+import { useFeatureIsOn } from "@growthbook/growthbook-react";
 import Link from "next/link";
 import { AppFeatures } from "../../generated-types/app-features";
 
 export default function Client() {
-  const colorClassName = useFeatureValue<AppFeatures["example-link-color"]>(
-    "example-link-color",
-    "bg-blue-500"
-  );
+  const isInColorTest = useFeatureIsOn<AppFeatures>("example_link_color_test");
+  const colorClassName = isInColorTest ? "bg-purple-500" : "bg-blue-500";
 
   return (
     <main className="container p-4 flex flex-col gap-4 items-start">

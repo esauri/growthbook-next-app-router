@@ -1,3 +1,3 @@
 export type AppFeatures = {
-  "example-link-color": string;
+  example_link_color_test: boolean;
 };

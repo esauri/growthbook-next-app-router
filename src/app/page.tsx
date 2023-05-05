@@ -1,7 +1,8 @@
 import Link from "next/link";
 
 export default function Home() {
-  const colorClassName = "bg-blue-500";
+  const isInColorTest = false;
+  const colorClassName = isInColorTest ? "bg-purple-500" : "bg-blue-500";
 
   return (
     <main className="container p-4 flex flex-col gap-4 items-start">
