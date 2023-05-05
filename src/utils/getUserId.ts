@@ -1,3 +1,13 @@
+import { cookies } from "next/headers";
+
+/**
+ * Grabs the userId from cookies
+ *
+ * @returns
+ */
 export default function getUserId() {
-  return "123";
+  const cookieStore = cookies();
+  const userIdCookie = cookieStore.get("userId");
+
+  return userIdCookie?.value;
 }

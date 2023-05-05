@@ -1,15 +1,19 @@
 import React, { ReactNode } from "react";
+import getServerSideGrowthBook from "../../utils/growthbook";
 import GrowthbookClientProvider from "./GrowthbookClientProvider";
-import getUserId from "../../utils/getUserId";
 
 type Props = {
   children: ReactNode;
 };
 
-export default function GrowthbookProvider({ children }: Props) {
-  const userId = getUserId();
+export default async function GrowthbookProvider({ children }: Props) {
+  const growthbook = await getServerSideGrowthBook();
+  const attributes = growthbook.getAttributes();
+  const features = growthbook.getFeatures();
 
   return (
-    <GrowthbookClientProvider id={userId}>{children}</GrowthbookClientProvider>
+    <GrowthbookClientProvider attributes={attributes} features={features}>
+      {children}
+    </GrowthbookClientProvider>
   );
 }

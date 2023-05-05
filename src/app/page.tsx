@@ -1,7 +1,9 @@
 import Link from "next/link";
+import getServerSideGrowthBook from "../utils/growthbook";
 
-export default function Home() {
-  const isInColorTest = false;
+export default async function Home() {
+  const growthbook = await getServerSideGrowthBook();
+  const isInColorTest = growthbook.isOn("example_link_color_test");
   const colorClassName = isInColorTest ? "bg-purple-500" : "bg-blue-500";
 
   return (

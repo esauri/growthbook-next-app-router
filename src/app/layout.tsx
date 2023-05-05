@@ -18,6 +18,7 @@ export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        {/* @ts-expect-error Async Server Component */}
         <GrowthbookProvider>{children}</GrowthbookProvider>
       </body>
     </html>
