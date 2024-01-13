@@ -31,22 +31,22 @@ export default async function Home() {
       <ul>
         <li>
           <Link href="/pages-router/static">
-            Pages Router + Growthbook (static)
+            Pages Router &middot; client only &middot; static
           </Link>
         </li>
         <li>
           <Link href="/pages-router/dynamic">
-            Pages Router + Growthbook (dynamic)
+            Pages Router &middot; client only &middot; dynamic
           </Link>
         </li>
         <li>
           <Link href="/app-router/client-only/static">
-            App Router + Growthbook (static)
+            App Router &middot; client only &middot; static
           </Link>
         </li>
         <li>
           <Link href="/app-router/client-only/dynamic">
-            App Router + Growthbook (dynamic)
+            App Router &middot; client only &middot; dynamic
           </Link>
         </li>
       </ul>
