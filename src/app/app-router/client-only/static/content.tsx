@@ -14,10 +14,11 @@ export default function AppRouterClientOnlyStaticPageContent({
 
   return (
     <main className="container p-4 flex flex-col gap-4 items-start">
-      <h1>Next App Router + Growthbook</h1>
+      <h1>Next App Router + Growthbook &middot; Client Only &middot; Static</h1>
       <p>
-        This is an example of a static page built app pages router. Page
-        rendered at <FormattedDate isInTest={isInTest} timestamp={timestamp} />.
+        This is an example of a <strong>static</strong> page built with the{" "}
+        <strong>app router</strong>. Page rendered at{" "}
+        <FormattedDate isInTest={isInTest} timestamp={timestamp} />.
       </p>
       <p>
         This is similar to the pages router version. If you're in the variant

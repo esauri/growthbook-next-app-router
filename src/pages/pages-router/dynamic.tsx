@@ -20,10 +20,13 @@ export default function PagesRouterDynamicPage({
 
   return (
     <main className="container p-4 flex flex-col gap-4 items-start">
-      <h1>Next Pages Router + Growthbook</h1>
+      <h1>
+        Next Pages Router + Growthbook &middot; Client Only &middot; Dynamic
+      </h1>
       <p>
-        This is an example of a dynamic page built with pages router. Page
-        rendered at <FormattedDate isInTest={isInTest} timestamp={timestamp} />.
+        This is an example of a <strong>dynamic</strong> page built with the{" "}
+        <strong>pages router</strong>. Page rendered at{" "}
+        <FormattedDate isInTest={isInTest} timestamp={timestamp} />.
       </p>
       <BackLink isInTest={isInTest} />
     </main>
