@@ -18,7 +18,7 @@ export default function AppRouterClientOnlyDynamicPageContent({
         Next App Router + Growthbook &middot; Client Only &middot; Dynamic
       </h1>
       <p>
-        This is an example of a <strong>dynamic</strong> page built the{" "}
+        This is an example of a <strong>dynamic</strong> page built with the{" "}
         <strong>app router</strong>. Page rendered at{" "}
         <FormattedDate isInTest={isInTest} timestamp={timestamp} />.
       </p>

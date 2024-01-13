@@ -1,6 +1,6 @@
 import Content from "./content";
 
-export default function AppRouterDynamicOnlyStaticPage() {
+export default function AppRouterClientOnlyDynamicPage() {
   const timestamp = Date.now();
 
   return <Content timestamp={timestamp} />;

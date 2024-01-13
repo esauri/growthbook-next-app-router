@@ -2,8 +2,8 @@
 import { GrowthBook, GrowthBookProvider } from "@growthbook/growthbook-react";
 import Cookies from "js-cookie";
 import { type ReactNode, useEffect } from "react";
-import { CookieKeys } from "@/constants/cookies";
 import { config } from "@/helpers/config";
+import { CookieKeys } from "@/constants/cookies";
 
 const { GROWTHBOOK_API_HOST, GROWTHBOOK_CLIENT_KEY, GROWTHBOOK_DEV_MODE } =
   config;
