@@ -39,6 +39,16 @@ export default async function Home() {
             Pages Router + Growthbook (dynamic)
           </Link>
         </li>
+        <li>
+          <Link href="/app-router/client-only/static">
+            App Router + Growthbook (static)
+          </Link>
+        </li>
+        <li>
+          <Link href="/app-router/client-only/dynamic">
+            App Router + Growthbook (dynamic)
+          </Link>
+        </li>
       </ul>
     </main>
   );
