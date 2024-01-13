@@ -1,23 +1,45 @@
 import Link from "next/link";
-import getServerSideGrowthBook from "../utils/growthbook";
+import { Suspense } from "react";
+import BucketForm from "@/components/BucketForm";
 
 export default async function Home() {
-  const growthbook = await getServerSideGrowthBook();
-  const isInColorTest = growthbook.isOn("example_link_color_test");
-  const colorClassName = isInColorTest ? "bg-purple-500" : "bg-blue-500";
-
   return (
     <main className="container p-4 flex flex-col gap-4 items-start">
-      <h1 className="text-2xl font-bold">Next App Router + Growthbook</h1>
+      <h1>Next.js + Growthbook</h1>
       <p>
-        This is a <strong>server</strong> component.
+        Contains various example pages to demonstrate GrowthBook integration
+        with Next.js.
       </p>
-      <Link
-        className={`${colorClassName} text-white px-4 py-2 rounded-2xl`}
-        href="/client"
-      >
-        Go to client component page
-      </Link>
+      <h2>Experiemnt</h2>
+      <p>There's a simple experiment running where the split is 50/50.</p>
+      <h3>Control Group</h3>
+      <p>
+        The control group should see a link and a date in{" "}
+        <span className="text-blue-500">blue</span>.
+      </p>
+      <h3>Variant Group</h3>
+      <p>
+        The variant group should see a link and a date in{" "}
+        <span className="text-purple-500">purple</span>.
+      </p>
+      <h2>Preferences</h2>
+      <p>Select a value below to update which variation you'd like to be in.</p>
+      <Suspense fallback={<p>Loading...</p>}>
+        <BucketForm />
+      </Suspense>
+      <h2>Examples:</h2>
+      <ul>
+        <li>
+          <Link href="/pages-router/static">
+            Pages Router + Growthbook (static)
+          </Link>
+        </li>
+        <li>
+          <Link href="/pages-router/dynamic">
+            Pages Router + Growthbook (dynamic)
+          </Link>
+        </li>
+      </ul>
     </main>
   );
 }
