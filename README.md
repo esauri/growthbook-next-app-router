@@ -1,30 +1,32 @@
-# Next App Router + Growthbook Example
+# Next.js + Growthbook Example
 
-This example showcases the ability to use [Growthbook](https://www.growthbook.io/) in a [Next.js](https://nextjs.org/) app that utilizes React Server Components (RSC) with the [app router](https://nextjs.org/docs/app/building-your-application/routing).
+These examples showcases the ability to use [Growthbook](https://www.growthbook.io/) in a [Next.js](https://nextjs.org/) app that utilizes the [Pages Router](https://nextjs.org/docs/pages/building-your-application) and the [App Router](https://nextjs.org/docs/app/building-your-application) with React Server Components.
 
 ## Example
 
 You can see a working example here https://growthbook-next-app-router.vercel.app/.
 
-User should see a blue button link. If the user has the feature enabled, they should see a purple button link instead.
+There's an experiment running that changes the accent color from blue to purple.
 
-You can enable the feature for yourself by adding a `userId` cookie with the value `123`.
+You can force the feature for yourself by setting your `deviceId` cookie to `off` or `on`. Otherwise the split is 50/50.
 
 ## Setup
 
 For this example you should set up a [Growthbook](https://app.growthbook.io/getstarted) project.
 
-Once you've gone through the process you can create a `example_link_color_test` boolean feature and turn it off. I would recommend creating a **Forced Value** rule for id, say value `123` to turn it on.
+Once you've gone through the process you can create a `example_link_color_test` boolean feature and turn it off. I would recommend creating a **Forced Value** rule for `deviceId`, say value `on` to turn it on and `off` to turn it off. Then add a split value of 50/50 for randomization.
 
 Then you can add your `NEXT_PUBLIC_GROWTHBOOK_CLIENT_KEY` in your `.env.local` file. If you wish to override the `NEXT_PUBLIC_GROWTHBOOK_API_HOST` you can also do it in that file.
 
-In order to determine if the user is seeing a blue (off) or purple (on) link, we check the `userId` cookie. If the cookie's value is what was entered in the Forced Value, it will be purple. Otherwise it will be blue.
+In order to determine if the user is seeing a blue (off) or purple (on) link, we check the `deviceId` cookie. If the cookie's value is what was entered in the Forced Value, it will be purple. Otherwise it will be blue.
 
 ## Problem
 
-Since [React Server Components have no React state](https://nextjs.org/docs/getting-started/react-essentials#context), we can't rely on `<GrowthbookProvider />` as it uses React Context.
+Growthbook provides a `<GrowthbookProvider />` component built on top of React Context which allows us to access features using various hooks such as `useFeatureIsOn`, `useFeatureValue` etc.
 
-This means that we'll need a different way to access feature values for React Server Components.
+Since [Server Components](https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns#using-context-providers) do not support React Context, we'll need a different way to access features and experiments when using the App Router.
+
+---
 
 ## How it works
 

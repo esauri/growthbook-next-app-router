@@ -1,4 +1,4 @@
-import { useFeatureValue } from "@growthbook/growthbook-react";
+import { useFeatureValue, useFeatureIsOn } from "@growthbook/growthbook-react";
 import type { InferGetStaticPropsType } from "next";
 import BackLink from "@/components/BackLink";
 import FormattedDate from "@/components/FormattedDate";
