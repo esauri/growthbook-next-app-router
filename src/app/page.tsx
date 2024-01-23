@@ -4,7 +4,7 @@ import BucketForm from "@/components/BucketForm";
 
 export default async function Home() {
   return (
-    <main className="container p-4 flex flex-col gap-4 items-start">
+    <main className="container p-4 flex flex-col gap-4 items-start mx-auto my-6">
       <h1>Next.js + Growthbook</h1>
       <p>
         Contains various example pages to demonstrate GrowthBook integration
@@ -52,6 +52,11 @@ export default async function Home() {
         <li>
           <Link href="/app-router/server-only">
             App Router &middot; Server Only &middot; Dynamic
+          </Link>
+        </li>
+        <li>
+          <Link href="/app-router/hybrid">
+            App Router &middot; Hybrid &middot; Dynamic
           </Link>
         </li>
       </ul>
