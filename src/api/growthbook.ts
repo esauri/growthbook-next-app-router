@@ -11,7 +11,10 @@ const growthbook = new GrowthBook({
   clientKey: GROWTHBOOK_CLIENT_KEY,
   enableDevMode: GROWTHBOOK_DEV_MODE,
   trackingCallback: (experiment, result) => {
-    // TODO: Use your real analytics tracking system
+    /**
+     * @TODO: Use your real analytics tracking system
+     * If you're doing a hybrid approach, ensure you're not duplicating events
+     */
     console.log("Viewed Experiment", {
       experimentId: experiment.key,
       variationId: result.key,

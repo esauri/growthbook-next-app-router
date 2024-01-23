@@ -49,3 +49,9 @@ See https://growthbook-next-app-router.vercel.app/app-router/client-only/static
 For the server only version of the app router, we load our growthbook features on the server using the **node.js** version of growthbook (`@growthbook/growthbook`), and we fetch that data in our server component.
 
 See https://growthbook-next-app-router.vercel.app/app-router/server-only
+
+#### Hybrid
+
+For the hybrid approach we load growthbook features and set attributes on the server in `src/app/app-router/hybrid/layout.tsx`. Then we pass down `attributes`, `experiments`, and `features` to a wrapper of `<GrowthBookProvider />`. This way we can access features on the client and server with as we did in the two previous appreaches.
+
+Note that `trackingCallback` will fire twice, one the server and then on the client, so be sure to include the callback in the place you desire.

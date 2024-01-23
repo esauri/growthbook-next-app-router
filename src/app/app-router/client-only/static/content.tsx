@@ -13,7 +13,7 @@ export default function AppRouterClientOnlyStaticPageContent({
   const isInTest = useFeatureValue<boolean>("example_link_color_test", false);
 
   return (
-    <main className="container p-4 flex flex-col gap-4 items-start">
+    <main className="container p-4 flex flex-col gap-4 items-start mx-auto my-6">
       <h1>Next App Router + Growthbook &middot; Client Only &middot; Static</h1>
       <p>
         This is an example of a <strong>static</strong> page built with the{" "}

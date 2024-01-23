@@ -8,7 +8,7 @@ export default async function AppRouterServerOnlyPageContent() {
   const timestamp = Date.now();
 
   return (
-    <main className="container p-4 flex flex-col gap-4 items-start">
+    <main className="container p-4 flex flex-col gap-4 items-start mx-auto my-6">
       <h1>Next App Router + Growthbook &middot; Server Only</h1>
       <p>
         This is an example of a <strong>dynamic</strong> page built with{" "}
