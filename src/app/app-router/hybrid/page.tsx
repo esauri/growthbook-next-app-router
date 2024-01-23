@@ -1,7 +1,7 @@
-import ClientComponent from "./content";
 import { getGrowthbook } from "@/api/growthbook";
 import BackLink from "@/components/BackLink";
 import FormattedDate from "@/components/FormattedDate";
+import ClientComponent from "./client";
 
 export default async function AppRouterHybridPage() {
   const growthbook = await getGrowthbook();
