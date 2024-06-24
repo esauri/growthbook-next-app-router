@@ -1,5 +1,7 @@
 # Next.js + Growthbook Example
 
+> ⚠️ The examples listed here are outdated and this repo has been archived. Please refer to the [official Growthbook documentation](https://docs.growthbook.io/lib/react#nextjs) for usage with Next.js.
+
 These examples showcases the ability to use [Growthbook](https://www.growthbook.io/) in a [Next.js](https://nextjs.org/) app that utilizes the [Pages Router](https://nextjs.org/docs/pages/building-your-application) and the [App Router](https://nextjs.org/docs/app/building-your-application) with React Server Components.
 
 ## Example
